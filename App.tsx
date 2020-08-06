@@ -4,6 +4,7 @@ import Landing from './src/pages/Landing';
 import { AppLoading } from 'expo'; /* Página de Loading quando inicia a aplicação */
 import { Archivo_400Regular, Archivo_700Bold, useFonts } from '@expo-google-fonts/archivo';
 import { Poppins_400Regular, Poppins_600SemiBold } from '@expo-google-fonts/poppins';
+import AppStack from './src/routes/AppStacc';
 
 export default function App() {
   /* Passando o nome das fontes que iremos utilizar, conforme documentação do expo-google-fonts */
@@ -21,7 +22,7 @@ export default function App() {
   } else {
     return (
       <>
-        <Landing />
+        <AppStack />
         <StatusBar style="light" />
       </>
     );
