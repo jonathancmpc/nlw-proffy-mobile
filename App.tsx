@@ -17,12 +17,12 @@ export default function App() {
   /* Se as fontes não estiverem carregadas, aparece o Loading. (Tudo na documentação do expo fonts) */
   if (!fontsLoaded) {
     return <AppLoading />
-    
+
   } else {
     return (
       <>
         <Landing />
-        <StatusBar style="auto" />
+        <StatusBar style="light" />
       </>
     );
   }
