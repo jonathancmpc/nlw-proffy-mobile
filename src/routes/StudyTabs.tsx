@@ -53,9 +53,14 @@ function StudyTabs() {
           /* Configurando texto da tab */
           tabBarLabel: 'Proffys',
           /* Inserindo ícone na aba, trocando a cor e tamanho */
-          tabBarIcon: ({ color, size }) => {
+          tabBarIcon: ({ color, size, focused }) => {
             return (
-              <Ionicons name="ios-easel" size={size} color={color} />
+              <Ionicons 
+                name="ios-easel" 
+                size={size} 
+                /* Se tiver foco muda de cor o ícone */
+                color={focused ? '#8257e5' : color} 
+              />
             );
           }
         }}
@@ -68,9 +73,14 @@ function StudyTabs() {
           /* Configurando texto da tab */
           tabBarLabel: 'Favoritos',
           /* Inserindo ícone na aba, trocando a cor e tamanho */
-          tabBarIcon: ({ color, size }) => {
+          tabBarIcon: ({ color, size, focused }) => {
             return (
-              <Ionicons name="ios-heart" size={size} color={color} />
+              <Ionicons 
+                name="ios-heart" 
+                size={size} 
+                /* Se tiver foco muda de cor o ícone */
+                color={focused ? '#8257e5' : color} 
+              />
             );
           }
         }}
