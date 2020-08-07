@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, Text, TextInput } from 'react-native';
 
 import PageHeader from '../../components/PageHeader';
 import TeacherItem from '../../components/TeacherItem';
@@ -10,7 +10,36 @@ import { ScrollView } from 'react-native-gesture-handler';
 function TeacherList() {
   return (
     <View style={styles.container}>
-      <PageHeader title="Proffys disponíveis"/>
+      <PageHeader title="Proffys disponíveis">
+        <View style={styles.serachForm}>
+          <Text style={styles.label}>Matéria</Text>
+          <TextInput 
+            style={styles.input}
+            placeholder="Qual a matéria?"
+            placeholderTextColor='#c1bccc'
+          />
+          
+          <View style={styles.inputGroup}>
+            <View style={styles.inputBlock}>
+              <Text style={styles.label}>Dia da semana</Text>
+              <TextInput 
+                style={styles.input}
+                placeholder="Qual o dia da semana?"
+                placeholderTextColor='#c1bccc'
+              />
+            </View>
+
+            <View style={styles.inputBlock}>
+              <Text style={styles.label}>Horário</Text>
+              <TextInput 
+                style={styles.input}
+                placeholder="Qual o Horário?"
+                placeholderTextColor='#c1bccc'
+              />
+            </View>
+          </View>
+        </View>
+      </PageHeader>
 
       {/* Criando Scrow da lista e estilizando ela */}
       <ScrollView

@@ -46,7 +46,6 @@ const styles = StyleSheet.create({
     fontSize: 14,
     lineHeight: 24,
     color: '#6a6180',
-    height: 90
   },
 
   footer: {
