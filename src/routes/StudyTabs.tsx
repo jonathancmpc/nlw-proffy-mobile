@@ -1,6 +1,8 @@
 /* Arquivo responsável pela navegação em abas */
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { Ionicons } from '@expo/vector-icons';
+
 import TeacherList from '../pages/TeacherList';
 import Favorites from '../pages/Favorites';
 
@@ -44,8 +46,35 @@ function StudyTabs() {
         activeTintColor: '#32268d',
       }}
     >
-      <Screen name="TeacherList" component={TeacherList} />
-      <Screen name="Favorites" component={Favorites} />
+      <Screen 
+        name="TeacherList" 
+        component={TeacherList} 
+        options={{
+          /* Configurando texto da tab */
+          tabBarLabel: 'Proffys',
+          /* Inserindo ícone na aba, trocando a cor e tamanho */
+          tabBarIcon: ({ color, size }) => {
+            return (
+              <Ionicons name="ios-easel" size={size} color={color} />
+            );
+          }
+        }}
+      />
+
+      <Screen 
+        name="Favorites" 
+        component={Favorites} 
+        options={{
+          /* Configurando texto da tab */
+          tabBarLabel: 'Favoritos',
+          /* Inserindo ícone na aba, trocando a cor e tamanho */
+          tabBarIcon: ({ color, size }) => {
+            return (
+              <Ionicons name="ios-heart" size={size} color={color} />
+            );
+          }
+        }}
+      />
     </Navigator>
   );
 }
