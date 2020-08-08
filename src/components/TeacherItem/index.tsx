@@ -53,7 +53,7 @@ const TeacherItem: React.FC<TeacherItemProps> = ({ teacher, favorited }) => {
       favoritesArray.splice(favoriteIndex, 1);
 
       /* Informando que este array não é favorito */
-      setIsFavorited(true);
+      setIsFavorited(false);
       
     } else {
       /* Incluindo um novo favorito no array */

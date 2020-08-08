@@ -11,6 +11,7 @@ import PageHeader from '../../components/PageHeader';
 import TeacherItem, { Teacher } from '../../components/TeacherItem';
 
 import styles from './styles';
+import { useFocusEffect } from '@react-navigation/native';
 
 function TeacherList() {
   const [filtersVisible, setFiltersVisible] = useState(false);
@@ -37,6 +38,10 @@ function TeacherList() {
       }
     });
   }
+
+  useFocusEffect(() => {
+    loadFavorites();
+  });
 
   /* Faz os filtros e também carrega os favoritos */
   async function handleFiltersSubmit() {
